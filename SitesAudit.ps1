@@ -85,7 +85,7 @@ Get-SPOSite -Limit All -Detailed | select owner,storageusagecurrent,storagequota
 
 Get-SPOSite -IncludePersonalSite $true -Limit all -Filter "Url -like '-my.sharepoint.com/personal/'" | select owner,storageusagecurrent,storagequota,storagequotawarninglevel,Url  | export-csv sharepoint.csv -append
 
-Write-host "Collection complete; please email " -BackgroundColor Black -ForegroundColor Yellow
+Write-host "Collection complete; please email o365groups.csv & sharepoint.csv to consultant " -BackgroundColor Black -ForegroundColor Yellow
 
 Get-PSSession | Remove-PSSession
 Disconnect-SPOService
